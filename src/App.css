@@ -1,38 +1,93 @@
-.App {
+@font-face {
+  font-family: "Regular";
+  src: local('ClanOT-Book'), url(./fonts/ClanOT-Book.ttf) format('truetype');
+};
+
+@font-face {
+  font-family: "Medium";
+  src: local('ClanOT-Medium'), url(./fonts/ClanOT-Medium.ttf) format('truetype');
+};
+
+html {
+  min-height: 100%;
+}
+
+body {
+  overflow: hidden;
   text-align: center;
+  background-color: #000;
+  font-family: Regular, serif;
+  color: #fff;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.container {
+  margin: auto;
+  width: 40%;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top: 20%;
 }
 
-.App-link {
-  color: #61dafb;
+@media only screen and (max-width:600px) {
+  .container {
+    margin: auto;
+    width: 85%;
+    justify-content: center;
+    margin-top: 20%;
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+h1 {
+  font-size: 3em;
+  font-weight: 100;
+  padding-top: 5px;
+  color: #FCFCFC;
+}
+
+input {
+  width: 60%;
+  height: 15%;
+  top: 100%;
+  left: 0px;
+  background-color: white;
+  color: black;
+  padding: 10px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+/* h3 {
+  width: 100%;
+} */
+
+@media only screen and (max-width:600px) {
+  h3 {
+    font-size: 18px;
   }
-  to {
-    transform: rotate(360deg);
-  }
+}
+
+button {
+  cursor: pointer;
+}
+
+.button-box {
+  width: 60%;
+  height: 15%;
+  top: 100%;
+  left: 0px;
+  background-color: white;
+  color: black;
+  padding: 10px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 22px;
+}
+
+.button-box:hover {
+  background: #efefef;
+  transform: scale(1.05);
+  transition: all .3s ease-in-out;
 }
