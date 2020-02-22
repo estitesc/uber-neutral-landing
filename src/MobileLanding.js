@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 export default class MobileLanding extends React.Component {
   constructor(props) {
@@ -38,20 +39,23 @@ export default class MobileLanding extends React.Component {
         {/* <p><a href="https://chrome.google.com/webstore/detail/lbigghnkakcnagblddpampmcfmjpnapp" className="button-box">Download Now</a></p> */}
         <h3>UberNeutral is a chrome extension and only takes 1 minute to set up on your computer. Add your email and we'll send you a reminder link for when you get home.</h3>
         <form className="test-mailing">
-        
-        <div>
-          <input
-            type="text"
-            id="test-mailing"
-            name="test-mailing"
-            onChange={this.handleChange}
-            placeholder="you@mail.com"
-            required
-            value={this.state.userEmail}
-          />
+          <div>
+            <input
+              type="text"
+              id="test-mailing"
+              name="test-mailing"
+              onChange={this.handleChange}
+              placeholder="you@mail.com"
+              required
+              value={this.state.userEmail}
+            />
+          </div>
+          <input type="button" value="Remind Me" style={{marginBottom: '25px'}} className="btn btn--submit" onClick={this.handleSubmit} />
+        </form>
+        <div className="bottom-section">
+          <h1>or...</h1>
+          <Link to="/calculator" style={{marginBottom: '25px'}} className="button-box-dark">calculate it yourself</Link>
         </div>
-        <input type="button" value="Remind Me" className="btn btn--submit" onClick={this.handleSubmit} />
-      </form>
       </div>
     );
   }
