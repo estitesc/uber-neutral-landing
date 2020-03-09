@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Uber Neutral",
+  "name": "A chrome extension to offset carbon emissions for every Uber ride you've taken.",
   "icons": [
     {
       "src": "favicon.ico",
